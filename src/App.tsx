@@ -1,13 +1,17 @@
 import Navbar from "@/components/custom/Navbar.tsx";
-import Hero from "@/components/custom/Hero.tsx";
+import HomePage from "@/components/custom/HomePage.tsx";
+import { Route, Routes } from "react-router-dom";
+import ServicesPage from "@/components/custom/ServicesPage.tsx";
 
 function App() {
   return (
     <div className="font-body">
       <Navbar />
       <main className="pt-[var(--navbar-height)]">
-        <Hero />
-        <div className="flex flex-col h-90"></div>
+        <Routes>
+          <Route path={"/"} element={<HomePage />} />
+          <Route path={"/services"} element={<ServicesPage />} />
+        </Routes>
       </main>
     </div>
   );

@@ -1,7 +1,9 @@
 import Navbar from "@/components/custom/Navbar.tsx";
 import HomePage from "@/components/custom/HomePage.tsx";
 import { Route, Routes } from "react-router-dom";
-import ServicesPage from "@/components/custom/ServicesPage.tsx";
+import Footer from "@/components/custom/Footer.tsx";
+import CandidatesPage from "@/components/custom/CandidatesPage.tsx";
+import AboutPage from "@/components/custom/AboutPage.tsx";
 
 function App() {
   return (
@@ -10,9 +12,11 @@ function App() {
       <main className="pt-[var(--navbar-height)]">
         <Routes>
           <Route path={"/"} element={<HomePage />} />
-          <Route path={"/services"} element={<ServicesPage />} />
+          <Route path={"/about"} element={<AboutPage />} />
+          <Route path={"/candidates"} element={<CandidatesPage />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   );
 }

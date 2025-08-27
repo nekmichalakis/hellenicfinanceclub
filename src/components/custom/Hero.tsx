@@ -2,22 +2,29 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button.tsx";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import skyscrapersImage from "@/assets/skyscrapers.webp";
+import whiteboardImage from "@/assets/whiteboard.webp";
+import chessImage from "@/assets/chess.webp";
 
 const slides = [
   {
-    image: "https://picsum.photos/800",
-    title: "Welcome to Our Club",
-    subtitle: "Where great minds connect.",
+    image: skyscrapersImage,
+    title: "Created by Students",
+    title2: "Built for Breakthroughs",
+    subtitle:
+      "A student-led network of Greece’s top talent, united by a shared drive to explore elite global finance opportunities.",
   },
   {
-    image: "https://picsum.photos/600",
-    title: "Build Your Network",
-    subtitle: "Meet like-minded professionals.",
+    image: chessImage,
+    title: "Strategic mentorship for students targeting high finance roles.",
+    subtitle:
+      "Beyond ambition, our workshops transform potential into practical expertise — giving members the technical edge demanded by global finance firms.",
   },
   {
-    image: "https://picsum.photos/700",
-    title: "Grow Together",
-    subtitle: "Events, workshops, and more.",
+    image: whiteboardImage,
+    title: "Exclusive events that connect ambition with opportunity.",
+    subtitle:
+      "Our curated events bring members face-to-face with professionals, firms, and challenges from the world of high finance—bridging the gap between classroom and career.",
   },
 ];
 
@@ -27,7 +34,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 5000);
+    }, 6000);
     return () => clearInterval(interval);
   }, [index]);
 
@@ -60,7 +67,7 @@ export default function Hero() {
       </AnimatePresence>
 
       {/*TEXT*/}
-      <div className="absolute inset-0 flex flex-col justify-center items-center px-8 md:px-16 text-white">
+      <div className="absolute inset-0 flex flex-col justify-center items-start mx-auto max-w-6xl px-8 md:px-16 text-white">
         <motion.h1
           key={slides[index].title}
           initial={{ opacity: 0, y: 20 }}
@@ -70,6 +77,8 @@ export default function Hero() {
           className="text-4xl md:text-6xl font-bold mb-4"
         >
           {slides[index].title}
+          <br />
+          {slides[index].title2}
         </motion.h1>
         <motion.p
           key={slides[index].subtitle}
@@ -77,7 +86,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1, delay: 1 }}
-          className="text-lg md:text-2xl"
+          className="text-lg md:text-xl max-w-3xl"
         >
           {slides[index].subtitle}
         </motion.p>

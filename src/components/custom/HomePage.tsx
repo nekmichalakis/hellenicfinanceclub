@@ -1,5 +1,6 @@
 import Hero from "@/components/custom/Hero.tsx";
 import { Button } from "@/components/ui/button.tsx";
+import officeImage from "@/assets/officeComp.avif";
 
 const HomePage = () => {
   return (
@@ -28,11 +29,30 @@ const HomePage = () => {
             Start Now
           </Button>
         </div>
-        <img
-          src={"https://picsum.photos/800"}
-          alt={"About Us"}
-          className={"w-1/2 object-cover h-[400px]"}
-        />
+        <div className="w-1/2 h-[400px] overflow-hidden bg-gray-200">
+          <img
+            src={officeImage}
+            alt={"About Us"}
+            loading={"lazy"}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+      <div className="flex gap-16 bg-primary px-12 py-16 items-center justify-center">
+        <h1 className={"text-6xl text-white"}>Admits Include</h1>
+        <div className={"size-36 bg-black flex items-center justify-center"}>
+          <h1 className={"text-gray-400 text-6xl"}>A</h1>
+        </div>
+        <div className={"size-36 bg-black flex items-center justify-center"}>
+          <h1 className={"text-gray-400 text-6xl"}>B</h1>
+        </div>
+        <div className={"size-36 bg-black flex items-center justify-center"}>
+          <h1 className={"text-gray-400 text-6xl"}>C</h1>
+        </div>
+        <div className={"size-36 bg-black flex items-center justify-center"}>
+          <h1 className={"text-gray-400 text-6xl"}>D</h1>
+        </div>
       </div>
     </div>
   );

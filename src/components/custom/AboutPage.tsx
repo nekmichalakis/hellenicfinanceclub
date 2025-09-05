@@ -25,7 +25,7 @@ const AboutPage = () => {
             "max-w-3xl mx-auto pb-24 pt-40 px-4 sm:px-6 lg:px-8 text-center"
           }
         >
-          <h1 className={"text-4xl font-extrabold text-white sm:text-5xl"}>
+          <h1 className={"text-4xl font-normal text-white sm:text-5xl"}>
             About Us
           </h1>
         </div>
@@ -34,7 +34,7 @@ const AboutPage = () => {
       <div className={"bg-secondary py-16"}>
         <div className={"max-w-6xl mx-auto bg-white flex"}>
           <div className={"w-2/3 p-16 flex flex-col gap-12"}>
-            <h1 className={"text-4xl font-extrabold sm:text-5xl mb-4"}>
+            <h1 className={"text-4xl font-normal sm:text-5xl mb-4"}>
               Our Story
             </h1>
             <p className={"text-md font-light"}>

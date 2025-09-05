@@ -50,17 +50,17 @@ const CandidatesPage = () => {
 
   return (
     <div>
-      <div className={"pt-32 pb-8 bg-white"}>
-        <div className={"max-w-3xl mx-auto flex flex-col gap-6"}>
-          <h1 className={"text-4xl md:text-6xl font-bold"}>
+      <div className={"pt-40 pb-8 bg-white"}>
+        <div className={"max-w-3xl mx-auto flex flex-col gap-16"}>
+          <h1 className={"text-3xl md:text-5xl font-normal"}>
             Candidates' Advantage
           </h1>
-          <p>
+          <p className={"font-light"}>
             At the Hellenic Finance Network our services are more than benefits
             - they are strategic investments in the future of Greek talent.
             Every member gains privileged access to career-shaping mentorship,
             elite networking, technical mastery and competitive platforms -{" "}
-            <span className={"font-semibold"}>
+            <span className={"font-medium"}>
               all provided at no cost. Because when our members grow, achieve,
               and lead, we succeed.
             </span>
@@ -83,9 +83,7 @@ const CandidatesPage = () => {
                   />
                 </div>
                 <div
-                  className={
-                    "absolute right-0 bottom-0 w-[90%] bg-gray-100 p-7"
-                  }
+                  className={"absolute right-0 bottom-0 w-[90%] bg-white p-7"}
                 >
                   <p className={"text-lg font-light"}>{option.caption}</p>
                 </div>

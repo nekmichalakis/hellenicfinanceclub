@@ -4,6 +4,8 @@ import { Route, Routes } from "react-router-dom";
 import Footer from "@/components/custom/Footer.tsx";
 import CandidatesPage from "@/components/custom/CandidatesPage.tsx";
 import AboutPage from "@/components/custom/AboutPage.tsx";
+import EventsPage from "@/components/custom/EventsPage.tsx";
+import ApplyPage from "@/components/custom/ApplyPage.tsx";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route path={"/"} element={<HomePage />} />
           <Route path={"/about"} element={<AboutPage />} />
           <Route path={"/candidates"} element={<CandidatesPage />} />
+          <Route path={"/events"} element={<EventsPage />} />
+          <Route path={"/apply"} element={<ApplyPage />} />
         </Routes>
       </main>
       <Footer />

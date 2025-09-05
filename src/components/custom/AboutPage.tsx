@@ -1,9 +1,29 @@
 const AboutPage = () => {
+  const boardMembers = [
+    {
+      name: "Aris Papadopoulos",
+      role: "Co-Founder & President",
+      image: "https://picsum.photos/200/200?random=1",
+    },
+    {
+      name: "Nikos Georgiou",
+      role: "Co-Founder & Vice President",
+      image: "https://picsum.photos/200/200?random=2",
+    },
+    {
+      name: "Maria Ioannou",
+      role: "Director of Events",
+      image: "https://picsum.photos/200/200?random=3",
+    },
+  ];
+
   return (
     <div>
       <div className={"bg-primary"}>
         <div
-          className={"max-w-3xl mx-auto py-24 px-4 sm:px-6 lg:px-8 text-center"}
+          className={
+            "max-w-3xl mx-auto pb-24 pt-40 px-4 sm:px-6 lg:px-8 text-center"
+          }
         >
           <h1 className={"text-4xl font-extrabold text-white sm:text-5xl"}>
             About Us
@@ -40,6 +60,53 @@ const AboutPage = () => {
               alt={"About us"}
               className={"w-full"}
             />
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col bg-white">
+        <div
+          className={
+            "flex flex-col items-center-center max-w-4xl text-center mx-auto gap-8 py-24 px-4"
+          }
+        >
+          <h1 className={"text-4xl md:text-5xl font-light"}>
+            Why We're Different
+          </h1>
+          <p className={"text-lg font-[200]"}>
+            Greece’s only independent finance club. Unlike university-affiliated
+            clubs, we recruit top talent from any institution.{" "}
+            <span className={"font-normal"}>
+              Our mission? To help ambitious Greek students break into elite
+              global finance — together. every event is a step toward your
+              future.
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <div className="flex flex-col bg-white">
+        <div
+          className={
+            "flex flex-col items-center-center max-w-4xl mx-auto gap-8 py-24 px-4"
+          }
+        >
+          <h1 className={"text-4xl md:text-5xl font-light text-center"}>
+            Meet the Board of Directors
+          </h1>
+          <div className={"w-12 h-1 bg-black self-center"} />
+          <div className={"grid grid-cols-1 md:grid-cols-2 gap-16 mt-16"}>
+            {boardMembers.map((member, index) => (
+              <div key={index} className={"flex flex-col gap-4"}>
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className={"w-100 h-100 object-cover"}
+                />
+                <h2 className={"text-lg font-medium"}>{member.name}</h2>
+                <p className={"text-md font-light"}>{member.role}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

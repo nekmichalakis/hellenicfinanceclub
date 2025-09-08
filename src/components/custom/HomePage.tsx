@@ -57,7 +57,7 @@ const HomePage = () => {
             "flex flex-col items-center-center max-w-4xl text-center mx-auto gap-8 py-24 px-4"
           }
         >
-          <h1 className={"text-4xl md:text-5xl font-light"}>
+          <h1 className={"text-4xl md:text-5xl font-medium"}>
             The Premier Finance Network for Greek Students
           </h1>
           <p className={"text-xl font-[200]"}>
@@ -87,13 +87,13 @@ const HomePage = () => {
 
       {/*CAROUSEL OF LOGOS*/}
       <div className="flex gap-8 bg-primary px-12 py-24 items-center ">
-        <h1 className={"text-6xl text-white font-light"}>
+        <h1 className={"text-6xl text-white font-medium"}>
           Global Alumni Network
         </h1>
         <div className="overflow-hidden w-4/5">
           <div className="flex gap-16 items-center [animation:scroll-right_15s_linear_infinite]">
             {/* Repeat logos twice for seamless loop */}
-            {["A", "B", "C", "D"].map((logo, idx) => (
+            {["A", "B", "C", "D", "A", "B", "C", "D", "E"].map((logo, idx) => (
               <div
                 key={idx}
                 className={"size-36 flex items-center justify-center"}
@@ -101,15 +101,7 @@ const HomePage = () => {
                 <h1 className={"text-gray-400 text-6xl"}>{logo}</h1>
               </div>
             ))}
-            {["A", "B", "C", "D"].map((logo, idx) => (
-              <div
-                key={idx}
-                className={"size-36 flex items-center justify-center"}
-              >
-                <h1 className={"text-gray-400 text-6xl"}>{logo}</h1>
-              </div>
-            ))}
-            {["A", "B", "C", "D"].map((logo, idx) => (
+            {["A", "B", "C", "D", "A", "B", "C", "D", "E"].map((logo, idx) => (
               <div
                 key={idx}
                 className={"size-36 flex items-center justify-center"}
@@ -128,15 +120,15 @@ const HomePage = () => {
             "flex flex-col items-center max-w-4xl text-center mx-auto gap-16 py-24 px-4"
           }
         >
-          <h1 className={"text-4xl md:text-5xl font-light"}>
+          <h1 className={"text-4xl md:text-5xl font-medium"}>
             Our Pipeline to High Finance
           </h1>
           <div className={"flex gap-8 justify-center mt-8"}>
             {pipeline.map((card, index) => (
               <div key={index} className={"flex flex-col items-center gap-4 "}>
                 {card.icon}
-                <p className={"text-md font-normal max-w-3xs"}>{card.text}</p>
-                <p className={"text-sm font-[200] max-w-3xs"}>
+                <p className={"text-lg font-medium max-w-3xs"}>{card.text}</p>
+                <p className={"text-sm font-light max-w-3xs"}>
                   {card.description}
                 </p>
               </div>
@@ -146,7 +138,7 @@ const HomePage = () => {
       </div>
 
       <div className="flex flex-col py-24 gap-6 items-center bg-secondary">
-        <h1 className={"text-4xl md:text-6xl font-light"}>
+        <h1 className={"text-4xl md:text-6xl font-medium"}>
           Explore Our Scope Of Work
         </h1>
         <p className={"text-xl font-[200]"}>Our Activities & Services</p>
@@ -157,7 +149,7 @@ const HomePage = () => {
 
       <div className="flex bg-white">
         <div className={"flex flex-col gap-6 p-16 w-1/2"}>
-          <h1 className={"text-4xl md:text-6xl font-light"}>Get to Know Us</h1>
+          <h1 className={"text-4xl md:text-6xl font-medium"}>Get to Know Us</h1>
           <p className={"text-xl font-[200]"}>Hellenic Finance Network</p>
           <Button
             variant={"primary"}

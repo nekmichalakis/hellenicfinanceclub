@@ -73,10 +73,10 @@ const AboutPage = () => {
           <h1 className={"text-4xl md:text-5xl font-light"}>
             Why We're Different
           </h1>
-          <p className={"text-lg font-[200]"}>
+          <p className={"text-lg font-light"}>
             Greece’s only independent finance club. Unlike university-affiliated
             clubs, we recruit top talent from any institution.{" "}
-            <span className={"font-normal"}>
+            <span className={"font-medium"}>
               Our mission? To help ambitious Greek students break into elite
               global finance — together. every event is a step toward your
               future.

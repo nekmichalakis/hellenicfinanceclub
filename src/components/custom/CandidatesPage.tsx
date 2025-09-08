@@ -85,7 +85,7 @@ const CandidatesPage = () => {
                 <div
                   className={"absolute right-0 bottom-0 w-[90%] bg-white p-7"}
                 >
-                  <p className={"text-lg font-light"}>{option.caption}</p>
+                  <p className={"text-lg font-normal"}>{option.caption}</p>
                 </div>
               </div>
             ))}

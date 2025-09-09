@@ -37,8 +37,12 @@ const AboutPage = () => {
       </div>
 
       <div className={"bg-chart-1 py-16"}>
-        <div className={"max-w-6xl mx-auto bg-white flex"}>
-          <div className={"w-2/3 p-16 flex flex-col gap-12"}>
+        <div
+          className={
+            "max-w-6xl mx-auto bg-white flex flex-col md:flex-row px-4"
+          }
+        >
+          <div className={"md:w-2/3 p-8 md:p-16 flex flex-col gap-12"}>
             <h1 className={"text-4xl font-normal sm:text-5xl mb-4"}>
               Our Story
             </h1>
@@ -59,7 +63,7 @@ const AboutPage = () => {
               </span>
             </p>
           </div>
-          <div className={"w-1/3"}>
+          <div className={"md:w-1/3"}>
             <img
               src={"https://picsum.photos/400/600"}
               alt={"About us"}
@@ -103,11 +107,13 @@ const AboutPage = () => {
           <div className={"grid grid-cols-1 md:grid-cols-2 gap-16 mt-16"}>
             {boardMembers.map((member, index) => (
               <div key={index} className={"flex flex-col"}>
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className={"w-100 h-100 object-cover"}
-                />
+                <div>
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className={"w-full h-full object-cover"}
+                  />
+                </div>
                 <div className={"flex items-center justify-between mt-2"}>
                   <h2 className={"text-lg font-medium"}>{member.name}</h2>
                   <div className={"flex items-center"}>

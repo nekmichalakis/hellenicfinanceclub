@@ -93,7 +93,7 @@ export default function Hero() {
       </div>
 
       {/* ARROWS */}
-      <div className="absolute inset-0 flex items-center justify-between px-4 z-20">
+      <div className="absolute inset-0 items-center justify-between px-4 z-20 hidden md:flex">
         <Button
           variant="ghost"
           onClick={handlePrev}

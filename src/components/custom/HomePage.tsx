@@ -88,7 +88,7 @@ const HomePage = () => {
 
       {/*CAROUSEL OF LOGOS*/}
       <div className="flex gap-8 bg-primary px-12 py-24 items-center ">
-        <h1 className={"text-6xl text-white font-medium"}>
+        <h1 className={"text-4xl md:text-5xl text-white font-medium"}>
           Global Alumni Network
         </h1>
         <div className="overflow-hidden w-4/5">
@@ -148,22 +148,26 @@ const HomePage = () => {
         </Button>
       </div>
 
-      <div className="flex bg-white">
-        <div className={"flex flex-col gap-6 p-16 w-1/2"}>
+      <div className="flex flex-col md:flex-row bg-white">
+        <div
+          className={
+            "flex flex-col gap-6 p-16 md:w-1/2 items-center md:items-start"
+          }
+        >
           <h1 className={"text-4xl md:text-6xl font-medium"}>Get to Know Us</h1>
-          <p className={"text-xl font-[200]"}>Hellenic Finance Network</p>
+          <p className={"text-xl font-thin"}>Hellenic Finance Network</p>
           <Link to={"/about"}>
             <Button
               variant={"primary"}
               className={
-                "rounded-full px-10 py-6 self-start font-light hover:opacity-60"
+                "rounded-full px-10 py-6 md:self-start font-light hover:opacity-60"
               }
             >
               Start Now
             </Button>
           </Link>
         </div>
-        <div className="w-1/2 h-[400px] overflow-hidden bg-gray-200">
+        <div className="md:w-1/2 h-[400px] overflow-hidden bg-gray-200">
           <img
             src={officeImage}
             alt={"About Us"}

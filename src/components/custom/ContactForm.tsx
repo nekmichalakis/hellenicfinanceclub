@@ -40,7 +40,7 @@ const ContactForm = () => {
   return (
     <div
       className={
-        "w-1/2 p-8 flex flex-col gap-16 right-0 mt-24 -mr-60 bg-white z-10"
+        "w-full md:w-1/2 p-8 flex flex-col gap-16 md:mt-24 bg-white z-10"
       }
     >
       <h1 className={"text-xl font-normal sm:text-2xl"}>Application Form</h1>

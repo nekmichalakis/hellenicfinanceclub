@@ -51,7 +51,9 @@ const MembersPage = () => {
   return (
     <div>
       <div className={"pt-40 pb-8 bg-white"}>
-        <div className={"max-w-3xl mx-auto flex flex-col gap-16 items-center"}>
+        <div
+          className={"max-w-3xl mx-auto flex flex-col gap-16 items-center px-8"}
+        >
           <h1 className={"text-3xl md:text-5xl font-normal"}>
             Members' Advantage
           </h1>
@@ -81,15 +83,15 @@ const MembersPage = () => {
         </div>
       </div>
 
-      <div className={"bg-white p-24"}>
-        <div className={"py-16 bg-chart-1"}>
+      <div className={"bg-white p-4 md:p-24"}>
+        <div className={"py-16 bg-chart-1 px-4 mx-auto"}>
           <div
             className={
               "max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16"
             }
           >
             {options.map((option) => (
-              <div className={"w-[300px] h-[400px] relative"}>
+              <div className={"relative"}>
                 <div className={"w-[95%] h-[90%] overflow-hidden"}>
                   <img
                     src={option.src}
@@ -112,12 +114,14 @@ const MembersPage = () => {
 
       <div className={"bg-primary p-24"}>
         <div
-          className={"max-w-5xl mx-auto flex text-white gap-16 items-center"}
+          className={
+            "max-w-5xl mx-auto flex flex-col md:flex-row text-white gap-16 items-center text-center md:text-start"
+          }
         >
-          <h1 className={"text-5xl font-normal w-2/5"}>
+          <h1 className={"text-5xl font-normal md:w-2/5"}>
             For Our Early Career Students
           </h1>
-          <p className={"text-md font-thin w-1/2"}>
+          <p className={"text-md font-thin md:w-1/2"}>
             HFN is committed to supporting emerging career members by offering{" "}
             <span className={"font-medium"}>
               dedicated services that address their unique needs and

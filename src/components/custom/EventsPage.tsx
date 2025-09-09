@@ -53,10 +53,10 @@ const EventsPage = () => {
           }
         >
           <h1 className={"text-4xl md:text-5xl font-light"}>Event Tracks</h1>
-          <div className={"grid grid-cols-2 gap-8"}>
+          <div className={"grid md:grid-cols-2 gap-8"}>
             {cards.map((card, index) => (
               <div key={index} className={"flex bg-chart-2"}>
-                <div className={"w-1/2 h-80"}>
+                <div className={"w-1/2"}>
                   <img
                     src={card.image}
                     alt={card.title}

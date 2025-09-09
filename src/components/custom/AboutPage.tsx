@@ -37,11 +37,7 @@ const AboutPage = () => {
       </div>
 
       <div className={"bg-chart-1 py-16"}>
-        <div
-          className={
-            "max-w-6xl mx-auto bg-white flex flex-col md:flex-row px-4"
-          }
-        >
+        <div className={"max-w-6xl mx-auto bg-white flex flex-col md:flex-row"}>
           <div className={"md:w-2/3 p-8 md:p-16 flex flex-col gap-12"}>
             <h1 className={"text-4xl font-normal sm:text-5xl mb-4"}>
               Our Story

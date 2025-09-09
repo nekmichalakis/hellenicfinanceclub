@@ -1,3 +1,8 @@
+import { Button } from "@/components/ui/button.tsx";
+import { InstagramSvg } from "@/assets/svgs/instagramSvg.tsx";
+import { FacebookSvg } from "@/assets/svgs/facebookSvg.tsx";
+import { XSvg } from "@/assets/svgs/XSvg.tsx";
+
 const AboutPage = () => {
   const boardMembers = [
     {
@@ -31,20 +36,20 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <div className={"bg-secondary py-16"}>
+      <div className={"bg-chart-1 py-16"}>
         <div className={"max-w-6xl mx-auto bg-white flex"}>
           <div className={"w-2/3 p-16 flex flex-col gap-12"}>
             <h1 className={"text-4xl font-normal sm:text-5xl mb-4"}>
               Our Story
             </h1>
-            <p className={"text-md font-light"}>
+            <p className={"text-md font-thin"}>
               The Hellenic Finance Network was born from a shared ambition.
               During an investment banking internship, two students — each from
               different backgrounds but united by a common vision — met,
               collaborated, and discovered a powerful synergy. That partnership
               between Aris and Nikos became the foundation for something bigger.
             </p>
-            <p className={"text-md font-light"}>
+            <p className={"text-md font-thin"}>
               After the internship ended, we knew our journey wasn’t just about
               personal success.{" "}
               <span className={"font-medium"}>
@@ -73,7 +78,7 @@ const AboutPage = () => {
           <h1 className={"text-4xl md:text-5xl font-light"}>
             Why We're Different
           </h1>
-          <p className={"text-lg font-light"}>
+          <p className={"text-md font-thin"}>
             Greece’s only independent finance club. Unlike university-affiliated
             clubs, we recruit top talent from any institution.{" "}
             <span className={"font-medium"}>
@@ -97,13 +102,26 @@ const AboutPage = () => {
           <div className={"w-12 h-1 bg-black self-center"} />
           <div className={"grid grid-cols-1 md:grid-cols-2 gap-16 mt-16"}>
             {boardMembers.map((member, index) => (
-              <div key={index} className={"flex flex-col gap-4"}>
+              <div key={index} className={"flex flex-col"}>
                 <img
                   src={member.image}
                   alt={member.name}
                   className={"w-100 h-100 object-cover"}
                 />
-                <h2 className={"text-lg font-medium"}>{member.name}</h2>
+                <div className={"flex items-center justify-between mt-2"}>
+                  <h2 className={"text-lg font-medium"}>{member.name}</h2>
+                  <div className={"flex items-center"}>
+                    <Button size={"icon"} variant={"ghost"}>
+                      <InstagramSvg width={16} height={16} />
+                    </Button>
+                    <Button size={"icon"} variant={"ghost"}>
+                      <FacebookSvg width={16} height={16} />
+                    </Button>
+                    <Button size={"icon"} variant={"ghost"}>
+                      <XSvg width={16} height={16} />
+                    </Button>
+                  </div>
+                </div>
                 <p className={"text-md font-light"}>{member.role}</p>
               </div>
             ))}

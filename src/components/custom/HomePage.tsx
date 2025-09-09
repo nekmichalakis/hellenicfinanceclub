@@ -9,6 +9,7 @@ import {
   TargetIcon,
   UsersIcon,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const cards = [
@@ -60,7 +61,7 @@ const HomePage = () => {
           <h1 className={"text-4xl md:text-5xl font-medium"}>
             The Premier Finance Network for Greek Students
           </h1>
-          <p className={"text-xl font-[200]"}>
+          <p className={"text-md font-thin"}>
             If you’re a Greek University Student, in the penultimate or final
             year of your studies, aiming for a career in Investment Banking,
             Private Equity, or Private Credit in an international financial hub,
@@ -117,20 +118,18 @@ const HomePage = () => {
       <div className="flex flex-col bg-white">
         <div
           className={
-            "flex flex-col items-center max-w-4xl text-center mx-auto gap-16 py-24 px-4"
+            "flex flex-col items-center max-w-6xl text-center mx-auto gap-16 py-24 px-4"
           }
         >
           <h1 className={"text-4xl md:text-5xl font-medium"}>
             Our Pipeline to High Finance
           </h1>
-          <div className={"flex gap-8 justify-center mt-8"}>
+          <div className={"grid grid-cols-1 md:grid-cols-3 gap-8 mt-8"}>
             {pipeline.map((card, index) => (
-              <div key={index} className={"flex flex-col items-center gap-4 "}>
+              <div key={index} className={"flex flex-col items-center gap-4"}>
                 {card.icon}
-                <p className={"text-lg font-medium max-w-3xs"}>{card.text}</p>
-                <p className={"text-sm font-light max-w-3xs"}>
-                  {card.description}
-                </p>
+                <p className={"text-lg font-medium"}>{card.text}</p>
+                <p className={"text-sm font-thin"}>{card.description}</p>
               </div>
             ))}
           </div>
@@ -139,9 +138,11 @@ const HomePage = () => {
 
       <div className="flex flex-col py-24 gap-6 items-center bg-secondary">
         <h1 className={"text-4xl md:text-6xl font-medium"}>
-          Explore Our Scope Of Work
+          Explore Our Network
         </h1>
-        <p className={"text-xl font-[200]"}>Our Activities & Services</p>
+        <p className={"text-xl font-[200]"}>
+          Eligible for both penultimate & final year students
+        </p>
         <Button className={"rounded-full py-6 px-10 mt-12 text-md font-light"}>
           Learn More
         </Button>
@@ -151,14 +152,16 @@ const HomePage = () => {
         <div className={"flex flex-col gap-6 p-16 w-1/2"}>
           <h1 className={"text-4xl md:text-6xl font-medium"}>Get to Know Us</h1>
           <p className={"text-xl font-[200]"}>Hellenic Finance Network</p>
-          <Button
-            variant={"primary"}
-            className={
-              "rounded-full px-10 py-6 self-start font-light hover:opacity-60"
-            }
-          >
-            Start Now
-          </Button>
+          <Link to={"/about"}>
+            <Button
+              variant={"primary"}
+              className={
+                "rounded-full px-10 py-6 self-start font-light hover:opacity-60"
+              }
+            >
+              Start Now
+            </Button>
+          </Link>
         </div>
         <div className="w-1/2 h-[400px] overflow-hidden bg-gray-200">
           <img

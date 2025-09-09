@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button.tsx";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  const backgroundWhite = location.pathname === "/candidates";
+  const backgroundWhite = location.pathname === "/members";
   const textBlack = location.pathname === "/events";
 
   useEffect(() => {
@@ -38,11 +38,14 @@ export default function Navbar() {
         <div className="flex space-x-6">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
-          <Link to="/candidates">Candidates</Link>
+          <Link to="/members">Members</Link>
           <Link to="/events">Events</Link>
         </div>
         <Link to={"/apply"}>
-          <Button variant={"primary"} className={"rounded-full px-10 py-6"}>
+          <Button
+            variant={"primary"}
+            className={"rounded-full px-10 py-6 hover:bg-chart-2"}
+          >
             Apply
           </Button>
         </Link>

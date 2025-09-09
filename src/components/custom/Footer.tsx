@@ -9,8 +9,8 @@ const Footer = () => {
     <footer className="bg-chart-1">
       <div className="container mx-auto max-w-3xl pt-8 pb-4 text-center text-sm font-light">
         <div className={"flex justify-between mb-4 items-center"}>
-          <h3 className={"text-xl"}>HFC</h3>
-          <div className={"flex gap-2"}>
+          <h3 className={"text-lg font-semibold"}>HFC</h3>
+          <div className={"flex gap-1"}>
             <Button size={"icon"} variant={"ghost"}>
               <InstagramSvg width={16} height={16} />
             </Button>
@@ -25,7 +25,9 @@ const Footer = () => {
             </Button>
           </div>
         </div>
-        <p>{"© 2025 Hellenic Finance Club. All rights reserved."}</p>
+        <p className={"font-thin"}>
+          {"© 2025 Hellenic Finance Club. All rights reserved."}
+        </p>
       </div>
     </footer>
   );

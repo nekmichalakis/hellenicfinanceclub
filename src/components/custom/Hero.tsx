@@ -74,7 +74,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="text-4xl md:text-6xl font-bold mb-4"
+          className="text-4xl md:text-6xl font-semibold mb-4"
         >
           {slides[index].title}
           <br />
@@ -86,7 +86,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1, delay: 1 }}
-          className="text-lg md:text-xl max-w-3xl"
+          className="text-lg md:text-xl max-w-3xl font-light"
         >
           {slides[index].subtitle}
         </motion.p>

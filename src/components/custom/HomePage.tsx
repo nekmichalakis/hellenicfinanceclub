@@ -10,6 +10,12 @@ import {
   UsersIcon,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import LbsSvg from "@/assets/svgs/lbsSvg.tsx";
+import bocconi from "@/assets/logos/bocconi.webp";
+import hec from "@/assets/logos/hec.webp";
+import aueb from "@/assets/logos/aueb.png";
+import papei from "@/assets/logos/papei.png";
+import { cn } from "@/lib/utils.ts";
 
 const HomePage = () => {
   const cards = [
@@ -46,6 +52,13 @@ const HomePage = () => {
       description:
         "Leveraging advanced academic credentials, mentorship, and the HFN network across global financial hubs to secure roles in investment banking, private equity, or private credit.",
     },
+  ];
+
+  const logos = [
+    { src: bocconi, alt: "Bocconi Logo" },
+    { src: hec, alt: "HEC Logo" },
+    { src: aueb, alt: "AUEB Logo" },
+    { src: papei, alt: "PAPEI Logo" },
   ];
 
   return (
@@ -87,29 +100,38 @@ const HomePage = () => {
       </div>
 
       {/*CAROUSEL OF LOGOS*/}
-      <div className="flex gap-8 bg-primary px-12 py-24 items-center ">
-        <h1 className={"text-4xl md:text-5xl text-white font-medium"}>
-          Global Alumni Network
-        </h1>
-        <div className="overflow-hidden w-4/5">
-          <div className="flex gap-16 items-center [animation:scroll-right_15s_linear_infinite]">
-            {/* Repeat logos twice for seamless loop */}
-            {["A", "B", "C", "D", "A", "B", "C", "D", "E"].map((logo, idx) => (
-              <div
-                key={idx}
-                className={"size-36 flex items-center justify-center"}
-              >
-                <h1 className={"text-gray-400 text-6xl"}>{logo}</h1>
-              </div>
-            ))}
-            {["A", "B", "C", "D", "A", "B", "C", "D", "E"].map((logo, idx) => (
-              <div
-                key={idx}
-                className={"size-36 flex items-center justify-center"}
-              >
-                <h1 className={"text-gray-400 text-6xl"}>{logo}</h1>
-              </div>
-            ))}
+      <div className="flex flex-col md:flex-row gap-16 bg-primary px-12 py-24 items-center justify-center">
+        <div className={"md:w-1/4 min-w-1/4"}>
+          <h1 className={"text-4xl md:text-5xl text-white font-medium"}>
+            Global Alumni Network
+          </h1>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 place-items-center">
+          {/*<div className="flex gap-16 items-center [animation:scroll-right_15s_linear_infinite]">*/}
+          {/* Repeat logos twice for seamless loop */}
+          {/*{["A", "B", "C", "D", "A", "B", "C", "D", "E"].map((logo, idx) => (*/}
+          {/*<div className={"size-36 flex items-center justify-center"}>*/}
+          {logos.map((logo, index) => (
+            <div
+              className={cn(
+                "max-w-[40vw] w-full flex items-center justify-center",
+                {
+                  "p-4": index !== 0 && index !== 1,
+                },
+              )}
+              key={index}
+            >
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className={"w-full h-auto object-cover"}
+              />
+            </div>
+          ))}
+          <div
+            className={"max-w-[40vw] w-full flex items-center justify-center"}
+          >
+            <LbsSvg className={"size-36 pl-2"} />
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import {
   MessagesSquareIcon,
 } from "lucide-react";
 import ContactForm from "@/components/custom/ContactForm.tsx";
+import laptops from "@/assets/laptops.webp";
 
 const ApplyPage = () => {
   const cards = [
@@ -100,11 +101,11 @@ const ApplyPage = () => {
       <div className={"bg-chart-2 pb-24 pt-40 px-4"}>
         <div className={"max-w-6xl mx-auto flex relative"}>
           <ContactForm />
-          <div className={"hidden md:block w-2/3 h-100 -ml-60"}>
+          <div className={"hidden md:block w-2/3 h-120 -ml-60"}>
             <img
-              src={"https://picsum.photos/300/200"}
-              alt={"Desert landscape"}
-              className={"w-full h-full object-cover"}
+              src={laptops}
+              alt={"Apply image"}
+              className={"size-full object-rights object-cover"}
             />
           </div>
         </div>

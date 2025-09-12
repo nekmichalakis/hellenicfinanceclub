@@ -1,6 +1,6 @@
 import Hero from "@/components/custom/Hero.tsx";
 import { Button } from "@/components/ui/button.tsx";
-import officeImage from "@/assets/officeComp.avif";
+import office from "@/assets/office.webp";
 import {
   ChartNoAxesCombinedIcon,
   CircleDashedIcon,
@@ -191,7 +191,7 @@ const HomePage = () => {
         </div>
         <div className="md:w-1/2 h-[400px] overflow-hidden bg-gray-200">
           <img
-            src={officeImage}
+            src={office}
             alt={"About Us"}
             loading={"lazy"}
             className="w-full h-full object-cover"

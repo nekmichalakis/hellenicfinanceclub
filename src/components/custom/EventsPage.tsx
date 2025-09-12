@@ -1,16 +1,19 @@
 import { Button } from "@/components/ui/button.tsx";
 import { Link } from "react-router-dom";
+import events from "@/assets/events.webp";
+import clear from "@/assets/clear.webp";
+import coffee from "@/assets/coffee.webp";
 
 const EventsPage = () => {
   const cards = [
     {
-      image: "https://picsum.photos/200/300",
+      image: coffee,
       title: "Industry Coffee Chats",
       description:
         "Small‑group conversations with seasoned finance professionals, blending open Q&A with deep industry insights. Designed to give you candid perspectives and practical takeaways in an intimate setting.",
     },
     {
-      image: "https://picsum.photos/200/300",
+      image: events,
       title: "Exclusive Networking Events",
       description:
         "In‑person gatherings where every member can meet and engage with our selective circle of high‑finance professionals and alumni from top‑tier institutions—building authentic connections that last.",
@@ -23,9 +26,9 @@ const EventsPage = () => {
         <div className={"max-w-6xl mx-auto flex relative"}>
           <div className={"w-2/3 h-100"}>
             <img
-              src={"https://picsum.photos/300/200"}
-              alt={"Desert landscape"}
-              className={"w-full h-full object-cover"}
+              src={clear}
+              alt={"events"}
+              className={"size-full object-cover"}
             />
           </div>
           <div
@@ -56,11 +59,11 @@ const EventsPage = () => {
           <div className={"grid md:grid-cols-2 gap-8"}>
             {cards.map((card, index) => (
               <div key={index} className={"flex bg-chart-2"}>
-                <div className={"w-1/2"}>
+                <div className={"w-1/2 min-h-100"}>
                   <img
                     src={card.image}
                     alt={card.title}
-                    className="w-full h-full object-cover"
+                    className="w-auto h-full object-cover"
                   />
                 </div>
                 <div

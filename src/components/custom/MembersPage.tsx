@@ -1,21 +1,28 @@
 import { Button } from "@/components/ui/button.tsx";
-import backgroundImage from "@/assets/backGeo.jpg";
+import backgroundImage from "@/assets/backGeo.webp";
 import { Link } from "react-router-dom";
+import chess2 from "@/assets/chess2.webp";
+import workshop from "@/assets/workshop.webp";
+import competition from "@/assets/competition.webp";
+import { cn } from "@/lib/utils.ts";
 
 const MembersPage = () => {
   const options = [
     {
-      src: "https://picsum.photos/200/300",
+      src: chess2,
+      className: "object-left",
       caption: "Strategy Blueprint",
       text: "We work with each candidate to develop a clear, actionable roadmap tailored to their goals — from targeting specific recruitment cycles to planning master’s studies for maximum impact. This includes one‑to‑one CV optimisation and personalised career consultations, ensuring every application reflects both skill and ambition at the highest standard.",
     },
     {
-      src: "https://picsum.photos/200/301",
+      src: workshop,
+      className: "object-center",
       caption: "Technical Workshops",
       text: "We provide hands‑on training in the core technical skills that top‑tier finance firms demand — from valuation and M&A financial modelling to advanced Excel and data visualisation. These sessions are immersive, practical, and delivered by experienced practitioners, so candidates graduate with confidence as well as capability.",
     },
     {
-      src: "https://picsum.photos/200/302",
+      src: competition,
+      className: "object-left",
       caption: "Competitions",
       text: "Our signature competitions place candidates in the spotlight to demonstrate technical skill, strategic thinking, and collaboration. Whether through internal trials or selective match‑ups with accomplished Hellenic Finance Network members, every challenge is designed to impress mentors, earn recognition, and prove readiness for the next level.",
     },
@@ -91,13 +98,11 @@ const MembersPage = () => {
             }
           >
             {options.map((option) => (
-              <div className={"relative"}>
+              <div className={"relative min-h-100"}>
                 <div className={"w-[95%] h-[90%] overflow-hidden"}>
                   <img
                     src={option.src}
-                    width={"100%"}
-                    height={"100%"}
-                    className={"object-cover"}
+                    className={cn("object-cover h-full", option.className)}
                     alt={"candidates image"}
                   />
                 </div>

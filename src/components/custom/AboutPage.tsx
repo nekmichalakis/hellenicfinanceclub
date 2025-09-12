@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button.tsx";
 import { InstagramSvg } from "@/assets/svgs/instagramSvg.tsx";
 import { FacebookSvg } from "@/assets/svgs/facebookSvg.tsx";
 import { XSvg } from "@/assets/svgs/XSvg.tsx";
+import desk from "@/assets/desk.webp";
 
 const AboutPage = () => {
   const boardMembers = [
@@ -61,9 +62,9 @@ const AboutPage = () => {
           </div>
           <div className={"md:w-1/3"}>
             <img
-              src={"https://picsum.photos/400/600"}
+              src={desk}
               alt={"About us"}
-              className={"w-full"}
+              className={"size-full object-cover object-center"}
             />
           </div>
         </div>

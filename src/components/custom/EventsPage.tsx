@@ -24,7 +24,7 @@ const EventsPage = () => {
     <div>
       <div className={"bg-chart-1 pb-24 pt-40 border "}>
         <div className={"max-w-6xl mx-auto flex relative"}>
-          <div className={"w-2/3 h-100"}>
+          <div className={"w-3/4 h-120"}>
             <img
               src={clear}
               alt={"events"}
@@ -33,7 +33,7 @@ const EventsPage = () => {
           </div>
           <div
             className={
-              "w-2/3 p-16 pb-40 flex flex-col gap-8 right-0 mt-24 -ml-60 bg-white"
+              "w-2/3 p-16 pb-40 flex flex-col gap-8 right-0 mt-32 -ml-70 bg-white"
             }
           >
             <h1 className={"text-4xl font-normal sm:text-5xl mb-4"}>
@@ -52,14 +52,14 @@ const EventsPage = () => {
       <div className="flex flex-col bg-white">
         <div
           className={
-            "flex flex-col items-center max-w-7xl mx-auto gap-16 py-24 px-4"
+            "flex flex-col items-center max-w-7xl mx-auto gap-16 py-24 px-8"
           }
         >
           <h1 className={"text-4xl md:text-5xl font-light"}>Event Tracks</h1>
           <div className={"grid md:grid-cols-2 gap-8"}>
             {cards.map((card, index) => (
               <div key={index} className={"flex bg-chart-2"}>
-                <div className={"w-1/2 min-h-100"}>
+                <div className={"w-1/2 md:min-h-100"}>
                   <img
                     src={card.image}
                     alt={card.title}

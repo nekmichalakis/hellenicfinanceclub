@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button.tsx";
-import { InstagramSvg } from "@/assets/svgs/instagramSvg.tsx";
-import { FacebookSvg } from "@/assets/svgs/facebookSvg.tsx";
-import { XSvg } from "@/assets/svgs/XSvg.tsx";
 import desk from "@/assets/desk.webp";
+import LinkedInSvg from "@/assets/svgs/linkedInSvg.tsx";
 
 const AboutPage = () => {
   const boardMembers = [
@@ -94,14 +92,14 @@ const AboutPage = () => {
       <div className="flex flex-col bg-white">
         <div
           className={
-            "flex flex-col items-center-center max-w-4xl mx-auto gap-8 py-24 px-4"
+            "flex flex-col items-center-center max-w-6xl mx-auto gap-8 py-24 px-4"
           }
         >
           <h1 className={"text-4xl md:text-5xl font-light text-center"}>
             Meet the Board of Directors
           </h1>
           <div className={"w-12 h-1 bg-black self-center"} />
-          <div className={"grid grid-cols-1 md:grid-cols-2 gap-16 mt-16"}>
+          <div className={"grid grid-cols-1 md:grid-cols-3 gap-16 mt-16"}>
             {boardMembers.map((member, index) => (
               <div key={index} className={"flex flex-col"}>
                 <div>
@@ -114,14 +112,8 @@ const AboutPage = () => {
                 <div className={"flex items-center justify-between mt-2"}>
                   <h2 className={"text-lg font-medium"}>{member.name}</h2>
                   <div className={"flex items-center"}>
-                    <Button size={"icon"} variant={"ghost"}>
-                      <InstagramSvg width={16} height={16} />
-                    </Button>
-                    <Button size={"icon"} variant={"ghost"}>
-                      <FacebookSvg width={16} height={16} />
-                    </Button>
-                    <Button size={"icon"} variant={"ghost"}>
-                      <XSvg width={16} height={16} />
+                    <Button variant={"ghost"} className={"p-0 size-5"}>
+                      <LinkedInSvg className={"size-4"} />
                     </Button>
                   </div>
                 </div>

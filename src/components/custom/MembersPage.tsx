@@ -57,7 +57,7 @@ const MembersPage = () => {
 
   return (
     <div>
-      <div className={"pt-40 pb-8 bg-white"}>
+      <div className={"pt-40 pb-24 bg-white"}>
         <div
           className={"max-w-3xl mx-auto flex flex-col gap-16 items-center px-8"}
         >
@@ -90,33 +90,6 @@ const MembersPage = () => {
         </div>
       </div>
 
-      <div className={"bg-white p-4 md:p-24"}>
-        <div className={"py-16 bg-chart-1 px-4 mx-auto"}>
-          <div
-            className={
-              "max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16"
-            }
-          >
-            {options.map((option) => (
-              <div className={"relative min-h-100"}>
-                <div className={"w-[95%] h-[90%] overflow-hidden"}>
-                  <img
-                    src={option.src}
-                    className={cn("object-cover h-full", option.className)}
-                    alt={"candidates image"}
-                  />
-                </div>
-                <div
-                  className={"absolute right-0 bottom-0 w-[90%] bg-white p-7"}
-                >
-                  <p className={"text-lg font-light"}>{option.caption}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
       <div className={"bg-primary p-24"}>
         <div
           className={
@@ -133,6 +106,41 @@ const MembersPage = () => {
               aspirations.
             </span>
           </p>
+        </div>
+      </div>
+
+      <div className={"bg-white p-4 md:p-24"}>
+        <div className={"py-16 bg-chart-1 px-24 mx-auto rounded-md"}>
+          <div
+            className={
+              "max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 justify-center"
+            }
+          >
+            {options.map((option) => (
+              <div
+                className={
+                  "relative min-h-90 md:min-h-100 flex flex-col items-center"
+                }
+              >
+                <div className={"w-full h-[90%] overflow-hidden rounded-md"}>
+                  <img
+                    src={option.src}
+                    className={cn("object-cover h-full", option.className)}
+                    alt={"candidates image"}
+                  />
+                </div>
+                <div
+                  className={
+                    "absolute bottom-0 w-[90%] bg-white p-7 rounded-md"
+                  }
+                >
+                  <p className={"text-lg font-light whitespace-nowrap"}>
+                    {option.caption}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 

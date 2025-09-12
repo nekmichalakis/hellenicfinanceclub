@@ -13,8 +13,8 @@ import { Link } from "react-router-dom";
 import LbsSvg from "@/assets/svgs/lbsSvg.tsx";
 import bocconi from "@/assets/logos/bocconi.webp";
 import hec from "@/assets/logos/hec.webp";
-import aueb from "@/assets/logos/aueb.png";
 import papei from "@/assets/logos/papei.png";
+import opa from "@/assets/logos/opa.png";
 import { cn } from "@/lib/utils.ts";
 
 const HomePage = () => {
@@ -55,10 +55,10 @@ const HomePage = () => {
   ];
 
   const logos = [
-    { src: bocconi, alt: "Bocconi Logo" },
-    { src: hec, alt: "HEC Logo" },
-    { src: aueb, alt: "AUEB Logo" },
-    { src: papei, alt: "PAPEI Logo" },
+    { src: bocconi, alt: "Bocconi Logo", className: "" },
+    { src: hec, alt: "HEC Logo", className: "" },
+    { src: opa, alt: "OPA Logo", className: "w-52 max-w-60 mr-12" },
+    { src: papei, alt: "PAPEI Logo", className: "" },
   ];
 
   return (
@@ -80,19 +80,21 @@ const HomePage = () => {
             Private Equity, or Private Credit in an international financial hub,
             register your interest below.
           </p>
-          <Button
-            variant={"primary"}
-            className={
-              "rounded-full px-10 py-6 font-light hover:opacity-60 self-center my-8"
-            }
-          >
-            Register your Interest
-          </Button>
+          <Link to={"/apply"}>
+            <Button
+              variant={"primary"}
+              className={
+                "rounded-full px-10 py-6 font-light hover:opacity-60 self-center my-8"
+              }
+            >
+              Register your Interest
+            </Button>
+          </Link>
           <div className={"flex gap-8 items-center justify-center mt-8"}>
             {cards.map((card, index) => (
               <div key={index} className={"flex flex-col items-center gap-4"}>
                 {card.icon}
-                <p className={"text-md font-[200] max-w-3xs"}>{card.text}</p>
+                <p className={"text-md font-thin max-w-3xs"}>{card.text}</p>
               </div>
             ))}
           </div>
@@ -115,9 +117,7 @@ const HomePage = () => {
             <div
               className={cn(
                 "max-w-[40vw] w-full flex items-center justify-center",
-                {
-                  "p-4": index !== 0 && index !== 1,
-                },
+                logo.className,
               )}
               key={index}
             >
@@ -165,9 +165,13 @@ const HomePage = () => {
         <p className={"text-xl font-[200]"}>
           Eligible for both penultimate & final year students
         </p>
-        <Button className={"rounded-full py-6 px-10 mt-12 text-md font-light"}>
-          Learn More
-        </Button>
+        <Link to={"/members"}>
+          <Button
+            className={"rounded-full py-6 px-10 mt-12 text-md font-light"}
+          >
+            Learn More
+          </Button>
+        </Link>
       </div>
 
       <div className="flex flex-col md:flex-row bg-white">

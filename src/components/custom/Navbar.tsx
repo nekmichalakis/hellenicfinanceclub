@@ -27,7 +27,7 @@ export default function Navbar() {
     >
       <div
         className={cn(
-          "container mx-auto flex justify-between items-center p-4 transition-colors duration-100",
+          "max-w-[90%] mx-auto flex justify-between items-center p-4 transition-colors duration-100",
           {
             "text-white":
               !scrolled && !backgroundWhite && !textBlack && !menuOpen,
@@ -36,7 +36,7 @@ export default function Navbar() {
         )}
       >
         <Link to="/">
-          <div className="text-xl font-bold">HFC</div>
+          <div className="text-xl font-bold">HFN</div>
         </Link>
         {/* Hamburger for mobile */}
         <Button

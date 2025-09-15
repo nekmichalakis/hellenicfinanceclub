@@ -22,9 +22,13 @@ const EventsPage = () => {
 
   return (
     <div>
-      <div className={"bg-chart-1 pb-24 pt-40 border "}>
-        <div className={"max-w-6xl mx-auto flex relative"}>
-          <div className={"w-3/4 h-120"}>
+      <div className={"bg-chart-1 md:pb-24 pt-40 border "}>
+        <div
+          className={
+            "max-w-6xl mx-auto flex flex-col-reverse md:flex-row relative"
+          }
+        >
+          <div className={"md:w-3/4 h-120"}>
             <img
               src={clear}
               alt={"events"}
@@ -33,10 +37,14 @@ const EventsPage = () => {
           </div>
           <div
             className={
-              "w-2/3 p-16 pb-40 flex flex-col gap-8 right-0 mt-32 -ml-70 bg-white"
+              "md:w-2/3 px-4 md:p-16 pb-40 flex flex-col gap-8 right-0 md:mt-32 md:-ml-70 md:bg-white"
             }
           >
-            <h1 className={"text-4xl font-normal sm:text-5xl mb-4"}>
+            <h1
+              className={
+                "text-4xl font-normal sm:text-5xl mb-4 text-center md:text-start"
+              }
+            >
               Our Events
             </h1>
             <p className={"text-md font-thin"}>
@@ -58,8 +66,11 @@ const EventsPage = () => {
           <h1 className={"text-4xl md:text-5xl font-light"}>Event Tracks</h1>
           <div className={"grid md:grid-cols-2 gap-8"}>
             {cards.map((card, index) => (
-              <div key={index} className={"flex bg-chart-2"}>
-                <div className={"w-1/2 md:min-h-100"}>
+              <div
+                key={index}
+                className={"flex flex-col md:flex-row bg-chart-2"}
+              >
+                <div className={"md:w-1/2 md:min-h-100"}>
                   <img
                     src={card.image}
                     alt={card.title}
@@ -68,7 +79,7 @@ const EventsPage = () => {
                 </div>
                 <div
                   className={
-                    "flex w-1/2 flex-col  justify-center gap-8 p-8 pr-4"
+                    "flex md:w-1/2 flex-col  justify-center gap-8 p-8 pr-4"
                   }
                 >
                   <p className={"text-md font-thin"}>{card.description}</p>

@@ -90,7 +90,7 @@ const MembersPage = () => {
         </div>
       </div>
 
-      <div className={"bg-primary p-24"}>
+      <div className={"bg-primary py-24 px-4"}>
         <div
           className={
             "max-w-5xl mx-auto flex flex-col md:flex-row text-white gap-16 items-center text-center md:text-start"
@@ -110,7 +110,7 @@ const MembersPage = () => {
       </div>
 
       <div className={"bg-white p-4 md:p-24"}>
-        <div className={"py-16 bg-chart-1 px-24 mx-auto rounded-md"}>
+        <div className={"py-16 bg-chart-1 px-16 mx-auto rounded-md"}>
           <div
             className={
               "max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 justify-center"
@@ -131,10 +131,10 @@ const MembersPage = () => {
                 </div>
                 <div
                   className={
-                    "absolute bottom-0 w-[90%] bg-white p-7 rounded-md"
+                    "absolute bottom-0 w-[90%] bg-white py-2 px-4 md:p-7 rounded-md"
                   }
                 >
-                  <p className={"text-lg font-light whitespace-nowrap"}>
+                  <p className={"text-lg font-light md:whitespace-nowrap"}>
                     {option.caption}
                   </p>
                 </div>
@@ -145,7 +145,9 @@ const MembersPage = () => {
       </div>
 
       <div
-        className={"p-24 flex flex-col md:flex-row gap-4 justify-center"}
+        className={
+          "p-24 flex flex-col md:flex-row gap-4 justify-center items-center md:items-stretch"
+        }
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",

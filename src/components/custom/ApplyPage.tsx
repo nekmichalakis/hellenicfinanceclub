@@ -83,7 +83,7 @@ const ApplyPage = () => {
 
       <div className="flex flex-col md:flex-row gap-16 bg-primary px-4 md:px-16 py-24 items-center text-white text-center">
         <h1 className={"text-5xl font-normal"}>What we Look for</h1>
-        <div className="w-2/3 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div className="md:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           <p className="text-md font-thin">
             - Intellectual Curiosity & Ambition for High Finance Industry
           </p>
@@ -98,7 +98,7 @@ const ApplyPage = () => {
         </div>
       </div>
 
-      <div className={"bg-chart-2 pb-24 pt-40 px-4"}>
+      <div className={"bg-chart-2 pb-24 pt-16 md:pt-40 px-4"}>
         <div className={"max-w-6xl mx-auto flex relative"}>
           <ContactForm />
           <div className={"hidden md:block w-2/3 h-120 -ml-60"}>

@@ -104,7 +104,11 @@ const HomePage = () => {
       {/*CAROUSEL OF LOGOS*/}
       <div className="flex flex-col md:flex-row gap-16 bg-primary px-12 py-24 items-center justify-center">
         <div className={"md:w-1/4 min-w-1/4"}>
-          <h1 className={"text-4xl md:text-5xl text-white font-medium"}>
+          <h1
+            className={
+              "text-4xl md:text-5xl text-white font-medium text-center md:text-start"
+            }
+          >
             Global Alumni Network
           </h1>
         </div>
@@ -158,7 +162,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col py-24 gap-6 items-center bg-secondary">
+      <div className="flex flex-col py-24 px-4 gap-6 items-center bg-secondary text-center md:text-start">
         <h1 className={"text-4xl md:text-6xl font-medium"}>
           Explore Our Network
         </h1>
@@ -180,7 +184,13 @@ const HomePage = () => {
             "flex flex-col gap-6 p-16 md:w-1/2 items-center md:items-start"
           }
         >
-          <h1 className={"text-4xl md:text-6xl font-medium"}>Get to Know Us</h1>
+          <h1
+            className={
+              "text-4xl md:text-6xl font-medium text-center md:text-start"
+            }
+          >
+            Get to Know Us
+          </h1>
           <p className={"text-xl font-thin"}>Hellenic Finance Network</p>
           <Link to={"/about"}>
             <Button

@@ -133,3 +133,26 @@
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+  will-change: transform;
+  /* Ensure smooth animation by using transform3d for hardware acceleration */
+  transform: translate3d(0, 0, 0);
+}
+
+/* Pause animation on hover for better UX */
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Ensure the animation starts smoothly */
+.animate-scroll {
+  backface-visibility: hidden;
+  perspective: 1000px;
+}

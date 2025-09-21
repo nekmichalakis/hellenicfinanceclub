@@ -110,22 +110,30 @@ const MembersPage = () => {
       </div>
 
       <div className={"bg-white p-4 md:p-24"}>
-        <div className={"py-16 bg-chart-1 px-16 mx-auto rounded-md"}>
+        <div className={"py-16 bg-chart-1 px-4 md:px-16 mx-auto rounded-md"}>
           <div
             className={
-              "max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 justify-center"
+              "max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 justify-center"
             }
           >
-            {options.map((option) => (
+            {options.map((option, index) => (
               <div
+                key={index}
                 className={
-                  "relative min-h-90 md:min-h-100 flex flex-col items-center"
+                  "relative min-h-72 md:min-h-100 flex flex-col items-center"
                 }
               >
-                <div className={"w-full h-[90%] overflow-hidden rounded-md"}>
+                <div
+                  className={
+                    "w-full h-64 md:h-[90%] overflow-hidden rounded-md"
+                  }
+                >
                   <img
                     src={option.src}
-                    className={cn("object-cover h-full", option.className)}
+                    className={cn(
+                      "object-cover w-full h-full",
+                      option.className,
+                    )}
                     alt={"candidates image"}
                   />
                 </div>
@@ -156,6 +164,7 @@ const MembersPage = () => {
       >
         {options.map((option, index) => (
           <div
+            key={index}
             className={
               "w-[300px] relative flex flex-col gap-8 items-center justify-between bg-white p-10 pt-20 text-primary"
             }

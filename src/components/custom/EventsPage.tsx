@@ -37,7 +37,7 @@ const EventsPage = () => {
           </div>
           <div
             className={
-              "md:w-2/3 px-4 md:p-16 pb-40 flex flex-col gap-8 right-0 md:mt-32 md:-ml-70 md:bg-white"
+              "md:w-2/3 px-4 md:p-16 pb-16 md:pb-40 flex flex-col gap-8 right-0 md:mt-32 md:-ml-70 md:bg-white"
             }
           >
             <h1
@@ -68,18 +68,20 @@ const EventsPage = () => {
             {cards.map((card, index) => (
               <div
                 key={index}
-                className={"flex flex-col md:flex-row bg-chart-2"}
+                className={
+                  "flex flex-col md:flex-row bg-chart-2 overflow-hidden"
+                }
               >
-                <div className={"md:w-1/2 md:min-h-100"}>
+                <div className={"w-full h-64 md:w-1/2 md:min-h-100"}>
                   <img
                     src={card.image}
                     alt={card.title}
-                    className="w-auto h-full object-cover"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div
                   className={
-                    "flex md:w-1/2 flex-col  justify-center gap-8 p-8 pr-4"
+                    "flex w-full md:w-1/2 flex-col justify-center gap-8 p-8 pr-4"
                   }
                 >
                   <p className={"text-md font-thin"}>{card.description}</p>

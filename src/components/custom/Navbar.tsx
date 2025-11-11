@@ -51,8 +51,8 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-6">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
-          <Link to="/members">Members</Link>
-          <Link to="/events">Events</Link>
+          {/*<Link to="/members">Members</Link>*/}
+          {/*<Link to="/events">Events</Link>*/}
         </div>
         <Link to={"/apply"} className="hidden md:block">
           <Button

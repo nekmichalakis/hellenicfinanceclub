@@ -49,9 +49,7 @@ const ApplyPage = () => {
               either in Greece or abroad.
             </p>
             <p className={"text-md font-thin text-white"}>
-              If you aspire to shape the future of finance and distinguish
-              yourself in a competitive landscape, we encourage you to apply
-              during our next recruitment cycle.
+              Recruitment cycle applications open 1st November
             </p>
           </div>
         </div>
@@ -81,19 +79,22 @@ const ApplyPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-16 bg-primary px-4 md:px-16 py-24 items-center text-white text-center">
+      <div className="flex flex-col md:flex-row gap-16 bg-[#324157] px-4 md:px-16 py-32 items-center text-white text-center">
         <h1 className={"text-5xl font-normal"}>What we Look for</h1>
         <div className="md:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-          <p className="text-md font-thin">
-            - Intellectual Curiosity & Ambition for High Finance Industry
+          <p className="text-md font-thin max-w-s">
+            <span className="mr-4">{"•"}</span>
+            Intellectual Curiosity & Ambition for High Finance Industry
           </p>
-          <p className="text-md font-thin">
-            - A spirit of contribution: candidates who seek not only to benefit
-            from the community, but also to enrich it through their own
-            way—whether through mentorship, engagement, or support.
+          <p className="text-md font-thin max-w-s">
+            <span className="mr-4">{"•"}</span>
+            {
+              "Seeking members who not only grow within the community but strengthen it through mentorship and participation."
+            }
           </p>
-          <p className="text-md font-thin">
-            - Competitive Academic Track Record
+          <p className="text-md font-thin max-w-s">
+            <span className="mr-4">{"•"}</span>
+            Competitive Academic Track Record
           </p>
         </div>
       </div>

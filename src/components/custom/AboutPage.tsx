@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button.tsx";
-import desk from "@/assets/desk.webp";
 import LinkedInSvg from "@/assets/svgs/linkedInSvg.tsx";
 
 const AboutPage = () => {
@@ -35,55 +34,82 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <div className={"bg-chart-1 py-16"}>
-        <div className={"max-w-6xl mx-auto bg-white flex flex-col md:flex-row"}>
-          <div className={"md:w-2/3 p-8 md:p-16 flex flex-col gap-12"}>
-            <h1 className={"text-4xl font-normal sm:text-5xl mb-4"}>
-              Our Story
-            </h1>
-            <p className={"text-md font-thin"}>
-              The Hellenic Finance Network was born from a shared ambition.
-              During an investment banking internship, two students — each from
-              different backgrounds but united by a common vision — met,
-              collaborated, and discovered a powerful synergy. That partnership
-              between Aris and Nikos became the foundation for something bigger.
-            </p>
-            <p className={"text-md font-thin"}>
-              After the internship ended, we knew our journey wasn’t just about
-              personal success.{" "}
-              <span className={"font-medium"}>
-                It was about creating a pathway for others. So we founded HFN: A
-                student‑led club helping Greek students break into elite finance
-                through exclusive, high‑impact connections.
-              </span>
-            </p>
-          </div>
-          <div className={"md:w-1/3"}>
-            <img
-              src={desk}
-              alt={"About us"}
-              className={"size-full object-cover object-center"}
-            />
-          </div>
+      {/*<div className={"bg-chart-1 py-16"}>*/}
+      {/*  <div className={"max-w-6xl mx-auto bg-white flex flex-col md:flex-row"}>*/}
+      {/*    <div className={"md:w-2/3 p-8 md:p-16 flex flex-col gap-12"}>*/}
+      {/*      <h1 className={"text-4xl font-normal sm:text-5xl mb-4"}>*/}
+      {/*        Our Story*/}
+      {/*      </h1>*/}
+      {/*      <p className={"text-md font-thin"}>*/}
+      {/*        <span className={"font-medium"}>*/}
+      {/*          The Hellenic Finance Network*/}
+      {/*        </span>{" "}*/}
+      {/*        started with a simple shared goal. During an investment banking*/}
+      {/*        internship, two students, Aris and Nikos, came from different*/}
+      {/*        backgrounds but quickly found common ground. Working together,*/}
+      {/*        they discovered a great synergy that turned into something bigger.*/}
+      {/*      </p>*/}
+      {/*      <p className={"text-md font-thin"}>*/}
+      {/*        After the internship, we realized our journey was not just about*/}
+      {/*        personal growth. It was about opening doors for others.{" "}*/}
+      {/*        <span className={"font-medium"}>*/}
+      {/*          That is how HFN was created, a student-led network that helps*/}
+      {/*          Greek students connect, learn, and break into top-tier finance.*/}
+      {/*        </span>*/}
+      {/*      </p>*/}
+      {/*    </div>*/}
+      {/*    <div className={"md:w-1/3"}>*/}
+      {/*      <img*/}
+      {/*        src={desk}*/}
+      {/*        alt={"About us"}*/}
+      {/*        className={"size-full object-cover object-center"}*/}
+      {/*      />*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
+
+      {/*OUR STORY*/}
+      <div className="flex flex-col bg-slate-300">
+        <div
+          className={
+            "flex flex-col items-center-center max-w-4xl  mx-auto gap-8 py-24 px-4"
+          }
+        >
+          <h1 className={"text-4xl md:text-5xl font-light text-center"}>
+            Our Story
+          </h1>
+          <p className={"text-md font-thin"}>
+            <span className={"font-medium"}>The Hellenic Finance Network</span>{" "}
+            started with a simple shared goal. During an investment banking
+            internship, two students, Aris and Nikos, came from different
+            backgrounds but quickly found common ground. Working together, they
+            discovered a great synergy that turned into something bigger.
+          </p>
+          <p className={"text-md font-thin"}>
+            After the internship, we realized our journey was not just about
+            personal growth. It was about opening doors for others.{" "}
+            <span className={"font-medium"}>
+              That is how HFN was created, a student-led network that helps
+              Greek students connect, learn, and break into top-tier finance.
+            </span>
+          </p>
         </div>
       </div>
 
+      {/*OUR MISSION*/}
       <div className="flex flex-col bg-white">
         <div
           className={
             "flex flex-col items-center-center max-w-4xl text-center mx-auto gap-8 py-24 px-4"
           }
         >
-          <h1 className={"text-4xl md:text-5xl font-light"}>
-            Why We're Different
-          </h1>
+          <h1 className={"text-4xl md:text-5xl font-light"}>Our Mission</h1>
           <p className={"text-md font-thin"}>
-            Greece’s only independent finance club. Unlike university-affiliated
-            clubs, we recruit top talent from any institution.{" "}
+            The Hellenic Finance Network was founded on a shared commitment to
+            advancing opportunities for Greek students interested in finance. .{" "}
             <span className={"font-medium"}>
-              Our mission? To help ambitious Greek students break into elite
-              global finance — together. every event is a step toward your
-              future.
+              HFN was established to foster these connections and support
+              students in pursuing careers across the financial sector
             </span>
           </p>
         </div>
@@ -102,7 +128,7 @@ const AboutPage = () => {
           <div className={"grid grid-cols-1 md:grid-cols-3 gap-16 mt-16"}>
             {boardMembers.map((member, index) => (
               <div key={index} className={"flex flex-col"}>
-                <div>
+                <div className={"w-80 h-96 border overflow-hidden"}>
                   <img
                     src={member.image}
                     alt={member.name}
@@ -117,7 +143,7 @@ const AboutPage = () => {
                     </Button>
                   </div>
                 </div>
-                <p className={"text-md font-light"}>{member.role}</p>
+                <p className={"font-thin"}>{member.role}</p>
               </div>
             ))}
           </div>

@@ -3,29 +3,26 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button.tsx";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import skyscrapersImage from "@/assets/skyscrapers.webp";
-import whiteboardImage from "@/assets/whiteboard.webp";
-import chessImage from "@/assets/chess.webp";
+import hallImage from "@/assets/hall.webp";
 
 const slides = [
   {
     image: skyscrapersImage,
-    title: "Created by Students",
-    title2: "Built for Breakthroughs",
-    subtitle:
-      "A student-led network of Greece’s top talent, united by a shared drive to explore elite global finance opportunities.",
+    title: "Hellenic Finance Network",
+    subtitle: "Your getaway to exclusive connections in High Finance",
   },
   {
-    image: chessImage,
+    image: hallImage,
     title: "Strategic mentorship for students targeting high finance roles.",
     subtitle:
       "Beyond ambition, our workshops transform potential into practical expertise — giving members the technical edge demanded by global finance firms.",
   },
-  {
-    image: whiteboardImage,
-    title: "Exclusive events that connect ambition with opportunity.",
-    subtitle:
-      "Our curated events bring members face-to-face with professionals, firms, and challenges from the world of high finance—bridging the gap between classroom and career.",
-  },
+  // {
+  //   image: whiteboardImage,
+  //   title: "Exclusive events that connect ambition with opportunity.",
+  //   subtitle:
+  //     "Our curated events bring members face-to-face with professionals, firms, and challenges from the world of high finance—bridging the gap between classroom and career.",
+  // },
 ];
 
 export default function Hero() {
@@ -77,8 +74,6 @@ export default function Hero() {
           className="text-4xl md:text-6xl font-semibold mb-4"
         >
           {slides[index].title}
-          <br />
-          {slides[index].title2}
         </motion.h1>
         <motion.p
           key={slides[index].subtitle}

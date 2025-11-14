@@ -129,36 +129,35 @@
   }
 }
 
-@keyframes scroll-seamless {
-  0% {
-    transform: translate3d(0, 0, 0);
+@keyframes slide {
+  from {
+    transform: translateX(0);
   }
-  100% {
-    transform: translate3d(var(--scroll-distance, -50%), 0, 0);
+  to {
+    transform: translateX(-100%);
   }
 }
 
-/* Performance optimizations for smooth animation */
-.animate-scroll-seamless {
-  will-change: transform;
-  backface-visibility: hidden;
-  perspective: 1000px;
-  transform: translateZ(0);
+.logos-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
 }
 
-/* Pause animation on hover for better UX */
-.animate-scroll-seamless:hover {
+.logos-slide {
+  display: inline-flex;
+  gap: 2rem;
+  align-items: center;
+  animation: slide 18s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .logos-slide {
+    gap: 4rem;
+  }
+}
+
+.logos-container:hover .logos-slide {
   animation-play-state: paused;
 }
 
-/* Faster on mobile */
-@media (max-width: 768px) {
-  @keyframes scroll-seamless {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-    100% {
-      transform: translate3d(var(--scroll-distance, -50%), 0, 0);
-    }
-  }
-}

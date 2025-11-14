@@ -129,30 +129,36 @@
   }
 }
 
-@keyframes scroll-right {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+@keyframes scroll-seamless {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(var(--scroll-distance, -50%), 0, 0);
+  }
 }
 
-@keyframes scroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.animate-scroll {
-  animation: scroll 30s linear infinite;
+/* Performance optimizations for smooth animation */
+.animate-scroll-seamless {
   will-change: transform;
-  /* Ensure smooth animation by using transform3d for hardware acceleration */
-  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform: translateZ(0);
 }
 
 /* Pause animation on hover for better UX */
-.animate-scroll:hover {
+.animate-scroll-seamless:hover {
   animation-play-state: paused;
 }
 
-/* Ensure the animation starts smoothly */
-.animate-scroll {
-  backface-visibility: hidden;
-  perspective: 1000px;
+/* Faster on mobile */
+@media (max-width: 768px) {
+  @keyframes scroll-seamless {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(var(--scroll-distance, -50%), 0, 0);
+    }
+  }
 }

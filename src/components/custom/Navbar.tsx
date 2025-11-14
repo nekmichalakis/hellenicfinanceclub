@@ -72,12 +72,12 @@ export default function Navbar() {
           <Link to="/about" onClick={() => setMenuOpen(false)}>
             About
           </Link>
-          <Link to="/members" onClick={() => setMenuOpen(false)}>
-            Members
-          </Link>
-          <Link to="/events" onClick={() => setMenuOpen(false)}>
-            Events
-          </Link>
+          {/*<Link to="/members" onClick={() => setMenuOpen(false)}>*/}
+          {/*  Members*/}
+          {/*</Link>*/}
+          {/*<Link to="/events" onClick={() => setMenuOpen(false)}>*/}
+          {/*  Events*/}
+          {/*</Link>*/}
           <Link to="/apply" onClick={() => setMenuOpen(false)}>
             <Button
               variant={"primary"}

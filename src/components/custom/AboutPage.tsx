@@ -1,22 +1,27 @@
 import { Button } from "@/components/ui/button.tsx";
 import LinkedInSvg from "@/assets/svgs/linkedInSvg.tsx";
+import papadatos from "@/assets/papadatos.webp";
+import tsolakis from "@/assets/tsolakis.webp";
 
 const AboutPage = () => {
   const boardMembers = [
+    // {
+    //   name: "Aris Papadopoulos",
+    //   role: "Co-Founder",
+    //   image: "https://picsum.photos/200/200?random=1",
+    //   linkedIn: "https://www.linkedin.com/",
+    // },
     {
-      name: "Aris Papadopoulos",
-      role: "Co-Founder & President",
-      image: "https://picsum.photos/200/200?random=1",
+      name: "Nikos Papadatos",
+      role: "Co-Founder",
+      image: papadatos,
+      linkedIn: "https://www.linkedin.com/in/nikolaspapadatos/",
     },
     {
-      name: "Nikos Georgiou",
-      role: "Co-Founder & Vice President",
-      image: "https://picsum.photos/200/200?random=2",
-    },
-    {
-      name: "Maria Ioannou",
-      role: "Director of Events",
-      image: "https://picsum.photos/200/200?random=3",
+      name: "Nikos Tsolakis",
+      role: "Co-Founder",
+      image: tsolakis,
+      linkedIn: "https://www.linkedin.com/in/nikolaostsolakis/",
     },
   ];
 
@@ -118,17 +123,17 @@ const AboutPage = () => {
       <div className="flex flex-col bg-white">
         <div
           className={
-            "flex flex-col items-center-center max-w-6xl mx-auto gap-8 py-24 px-4"
+            "flex flex-col items-center max-w-6xl mx-auto gap-8 py-24 px-4"
           }
         >
           <h1 className={"text-4xl md:text-5xl font-light text-center"}>
             Meet the Board of Directors
           </h1>
-          <div className={"w-12 h-1 bg-black self-center"} />
-          <div className={"grid grid-cols-1 md:grid-cols-3 gap-16 mt-16"}>
+          <div className={"w-12 h-1 bg-black"} />
+          <div className={"grid grid-cols-1 md:grid-cols-2 gap-16 mt-16"}>
             {boardMembers.map((member, index) => (
-              <div key={index} className={"flex flex-col"}>
-                <div className={"w-80 h-96 border overflow-hidden"}>
+              <div key={index} className={"flex flex-col max-w-80 "}>
+                <div className={"overflow-hidden h-96"}>
                   <img
                     src={member.image}
                     alt={member.name}
@@ -138,7 +143,11 @@ const AboutPage = () => {
                 <div className={"flex items-center justify-between mt-2"}>
                   <h2 className={"text-lg font-medium"}>{member.name}</h2>
                   <div className={"flex items-center"}>
-                    <Button variant={"ghost"} className={"p-0 size-5"}>
+                    <Button
+                      variant={"ghost"}
+                      className={"p-0 size-5"}
+                      onClick={() => window.open(member.linkedIn, "_blank")}
+                    >
                       <LinkedInSvg className={"size-4"} />
                     </Button>
                   </div>

@@ -11,7 +11,11 @@ const Footer = () => {
             {/*<Button size={"icon"} variant={"ghost"}>*/}
             {/*  <InstagramSvg width={16} height={16} />*/}
             {/*</Button>*/}
-            <Button size={"icon"} variant={"ghost"}>
+            <Button
+              size={"icon"}
+              variant={"ghost"}
+              onClick={() => window.open("https://www.linkedin.com/", "_blank")}
+            >
               <LinkedInSvg className={"size-5"} />
             </Button>
           </div>

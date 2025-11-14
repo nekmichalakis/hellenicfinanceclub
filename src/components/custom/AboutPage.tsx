@@ -5,12 +5,12 @@ import tsolakis from "@/assets/tsolakis.webp";
 
 const AboutPage = () => {
   const boardMembers = [
-    // {
-    //   name: "Aris Papadopoulos",
-    //   role: "Co-Founder",
-    //   image: "https://picsum.photos/200/200?random=1",
-    //   linkedIn: "https://www.linkedin.com/",
-    // },
+    {
+      name: "Aris Papadopoulos",
+      role: "Co-Founder",
+      // image: "https://picsum.photos/200/200?random=1",
+      linkedIn: "https://www.linkedin.com/",
+    },
     {
       name: "Nikos Papadatos",
       role: "Co-Founder",
@@ -19,7 +19,7 @@ const AboutPage = () => {
     },
     {
       name: "Nikos Tsolakis",
-      role: "Co-Founder",
+      role: "Managing Director",
       image: tsolakis,
       linkedIn: "https://www.linkedin.com/in/nikolaostsolakis/",
     },
@@ -130,15 +130,21 @@ const AboutPage = () => {
             Meet the Board of Directors
           </h1>
           <div className={"w-12 h-1 bg-black"} />
-          <div className={"grid grid-cols-1 md:grid-cols-2 gap-16 mt-16"}>
+          <div className={"grid grid-cols-1 md:grid-cols-3 gap-16 mt-16"}>
             {boardMembers.map((member, index) => (
               <div key={index} className={"flex flex-col max-w-80 "}>
                 <div className={"overflow-hidden h-96"}>
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className={"w-full h-full object-cover"}
-                  />
+                  {member.image ? (
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className={"w-full h-full object-cover"}
+                    />
+                  ) : (
+                    <div
+                      className={"w-full h-full object-cover bg-secondary"}
+                    />
+                  )}
                 </div>
                 <div className={"flex items-center justify-between mt-2"}>
                   <h2 className={"text-lg font-medium"}>{member.name}</h2>

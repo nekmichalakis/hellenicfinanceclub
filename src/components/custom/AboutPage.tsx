@@ -6,10 +6,10 @@ import tsolakis from "@/assets/tsolakis.webp";
 const AboutPage = () => {
   const boardMembers = [
     {
-      name: "Aris Papadopoulos",
+      name: "Aris Papathanasiou",
       role: "Co-Founder",
       // image: "https://picsum.photos/200/200?random=1",
-      linkedIn: "https://www.linkedin.com/",
+      linkedIn: "https://www.linkedin.com/in/aris-papathanasiou-534082346/",
     },
     {
       name: "Nikos Papadatos",

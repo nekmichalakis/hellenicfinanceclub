@@ -48,20 +48,18 @@ export default function Navbar() {
           <MenuIcon className={"size-6"} />
         </Button>
         {/* Navigation links */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex space-x-12 items-center">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
-          {/*<Link to="/members">Members</Link>*/}
-          {/*<Link to="/events">Events</Link>*/}
+          <Link to={"/apply"} className="hidden md:block">
+            <Button
+              variant={"primary"}
+              className={"rounded-full px-10 py-6 hover:bg-chart-2"}
+            >
+              Apply
+            </Button>
+          </Link>
         </div>
-        <Link to={"/apply"} className="hidden md:block">
-          <Button
-            variant={"primary"}
-            className={"rounded-full px-10 py-6 hover:bg-chart-2"}
-          >
-            Apply
-          </Button>
-        </Link>
       </div>
       {/* Mobile menu */}
       {menuOpen && (
@@ -72,12 +70,6 @@ export default function Navbar() {
           <Link to="/about" onClick={() => setMenuOpen(false)}>
             About
           </Link>
-          {/*<Link to="/members" onClick={() => setMenuOpen(false)}>*/}
-          {/*  Members*/}
-          {/*</Link>*/}
-          {/*<Link to="/events" onClick={() => setMenuOpen(false)}>*/}
-          {/*  Events*/}
-          {/*</Link>*/}
           <Link to="/apply" onClick={() => setMenuOpen(false)}>
             <Button
               variant={"primary"}

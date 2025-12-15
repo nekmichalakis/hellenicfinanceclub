@@ -13,9 +13,9 @@ const slides = [
   },
   {
     image: hallImage,
-    title: "Strategic mentorship for students targeting high finance roles.",
+    title: "Membership",
     subtitle:
-      "Beyond ambition, our workshops transform potential into practical expertise — giving members the technical edge demanded by global finance firms.",
+      "We equip our members with deep industry knowledge and strong networks through our activities.",
   },
   // {
   //   image: whiteboardImage,

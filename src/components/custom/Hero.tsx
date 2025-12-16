@@ -2,19 +2,19 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button.tsx";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import skyscrapersImage from "@/assets/skyscrapers.webp";
-import hallImage from "@/assets/hall.webp";
+import scrape1 from "@/assets/scrape1.webp";
+import scrape2 from "@/assets/scrape2.webp";
 
 const slides = [
   {
-    image: skyscrapersImage,
+    image: scrape1,
     title: "Hellenic Finance Network",
     subtitle: "Your getaway to exclusive connections in High Finance",
   },
   {
-    image: hallImage,
-    title: "Membership",
-    subtitle:
+    image: scrape2,
+    overTitle: "Membership",
+    title:
       "We equip our members with deep industry knowledge and strong networks through our activities.",
   },
   // {
@@ -65,13 +65,23 @@ export default function Hero() {
 
       {/*TEXT*/}
       <div className="absolute inset-0 flex flex-col justify-center items-start mx-auto max-w-6xl px-8 md:px-16 text-white">
+        <motion.p
+          key={slides[index].overTitle}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1, delay: 1 }}
+          className="text-xl md:text-3xl max-w-3xl font-light"
+        >
+          {slides[index].overTitle}
+        </motion.p>
         <motion.h1
           key={slides[index].title}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="text-4xl md:text-6xl font-semibold mb-4"
+          className="text-4xl md:text-6xl font-semibold my-4"
         >
           {slides[index].title}
         </motion.h1>
